@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/intezer/analyze-python-sdk/blob/master/intezer_sdk/api.py ; https://docs.intezer.com/docs
+docs: https://docs.intezer.com/docs
+summary:
+  types: [apiKey, http-bearer]
+  api_key_in: [body]
+  bearer_source: access-token-exchange
+schemes:
+  - name: ApiKeyAccessToken
+    type: apiKey
+    in: body
+    description: >-
+      Clients POST their API key to /api/v2-0/get-access-token to obtain a short-lived
+      JWT. The API key is generated in the Intezer Analyze account page (Account >
+      API Access > Generate API Key) and can be supplied via the INTEZER_ANALYZE_API_KEY
+      environment variable to the SDK/CLI.
+    token_endpoint: https://analyze.intezer.com/api/v2-0/get-access-token
+  - name: BearerJWT
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+    description: >-
+      The access token returned by get-access-token is sent as
+      `Authorization: Bearer <jwt>` on every subsequent API request.
+notes: >-
+  Derived from the official Python SDK auth flow and confirmed against the public docs
+  landing. Full API reference (docs.intezer.com/docs) is access-gated. On-premise
+  deployments accept a custom base URL (http://<address>/api).
