@@ -1,9 +1,31 @@
 aid: intezer
 name: Intezer
-description: 'Intezer is a company surfaced as a portfolio company of norwest-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Intezer operates a Forensic AI SOC platform that autonomously triages, investigates
+  and helps respond to every security alert flowing from an organization's EDR, NDR,
+  SIEM, identity, cloud and email-security tooling. Its investigation engine combines
+  Genetic Malware Analysis (code-reuse mapping against a large genome of trusted and
+  malicious software), dynamic and static analysis, memory forensics, sandboxing and
+  agentic AI reasoning to reach a verdict on alerts in under two minutes. The Intezer
+  Platform API 2.0 exposes this analysis surface programmatically — submitting files,
+  URLs, hashes and endpoint scans for analysis, retrieving verdicts and code-reuse
+  results, and querying IOCs — and is offered alongside an official Python SDK, a CLI,
+  and an MCP server that connects AI agents such as Claude, Cursor and Codex to case
+  histories and investigation context.
 url: https://raw.githubusercontent.com/api-evangelist/intezer/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://intezer.com/wp-content/uploads/2023/05/intezer-logo.svg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,11 +34,37 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-- Unknown
-apis: []
+- Cybersecurity
+- Security
+- Malware Analysis
+- Threat Intelligence
+- SOC
+- Incident Response
+- Artificial Intelligence
+- Automation
+apis:
+- name: Intezer Platform API
+  description: >-
+    Intezer Platform API 2.0 — submit files, URLs, hashes and endpoint scans for
+    autonomous malware analysis and code-reuse detection, poll analysis status, and
+    retrieve verdicts, sub-analyses and IOCs. Authenticated by exchanging an API key
+    for a short-lived bearer JWT.
+  humanURL: https://docs.intezer.com/docs
+  baseURL: https://analyze.intezer.com/api/v2-0
+  tags:
+  - Malware Analysis
+  - Threat Intelligence
+  - Security
+  properties:
+  - type: Authentication
+    url: authentication/intezer-authentication.yml
+  - type: Conventions
+    url: conventions/intezer-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/intezer-lifecycle.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +73,48 @@ maintainers:
 common:
 - type: Website
   url: https://intezer.com
+- type: DeveloperPortal
+  url: https://analyze.intezer.com
+- type: Documentation
+  url: https://docs.intezer.com/docs
+- type: APIReference
+  url: https://docs.intezer.com/docs
+- type: Blog
+  url: https://intezer.com/blog/
+- type: Pricing
+  url: https://intezer.com/pricing/
+- type: Login
+  url: https://analyze.intezer.com/sign-in
+- type: TermsOfService
+  url: https://intezer.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://intezer.com/privacy/
+- type: GitHubOrganization
+  url: https://github.com/intezer
+- type: Packages
+  url: packages/intezer-packages.yml
+- type: SDKs
+  url: packages/intezer-packages.yml
+- type: CLI
+  url: cli/intezer-cli.yml
+- type: MCPServer
+  url: mcp/intezer-mcp.yml
+- type: Authentication
+  url: authentication/intezer-authentication.yml
+- type: Conventions
+  url: conventions/intezer-conventions.yml
+- type: Lifecycle
+  url: lifecycle/intezer-lifecycle.yml
+- type: Conformance
+  url: conformance/intezer-conformance.yml
+- type: Compliance
+  url: https://intezer.com/security/
+- type: TrustCenter
+  url: security/intezer-trust-center.yml
+- type: DomainSecurity
+  url: security/intezer-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

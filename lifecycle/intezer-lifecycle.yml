@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/intezer/analyze-python-sdk ; https://docs.intezer.com/docs
+versioning:
+  scheme: uri-path
+  current: v2-0
+  base_url: https://analyze.intezer.com/api/v2-0
+  docs: https://docs.intezer.com/docs
+  notes: Intezer Platform API 2.0; the version is carried in the URL path (/api/v2-0). Older v1-2 account endpoints remain in use for auth/session.
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: No public deprecation/sunset policy or RFC 8594 header support found; API reference is access-gated.
+sla:
+  url: null
+status_page: null
+deployment:
+  models: [cloud, on-premise]
+  on_premise_note: The SDK/CLI accept a custom base URL for on-premise deployments (http://<address>/api).
+deprecated_operations: []

@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/intezer/analyze-cli ; https://pypi.org/project/intezer-analyze-cli/
+name: intezer-cli
+official: true
+description: Cross-platform CLI that analyzes files, directories and hash lists with the Intezer AI-SOC Platform. Distributed as the intezer-analyze-cli Python package.
+requirements: Python 3.10+
+install:
+  - method: pip
+    command: pip install intezer-analyze-cli
+auth:
+  style: api-key-login
+  command: intezer-cli login <api_key>
+  on_premise: intezer-cli login <api_key> http://<address>/api
+  notes: Login exchanges the API key for a session against the Intezer Platform API; on-premise deployments accept a custom base URL.
+proxies:
+  supported: true
+  env: [HTTP_PROXY, HTTPS_PROXY]
+commands:
+  - name: login
+    summary: Authenticate the CLI with your Intezer API key (optionally against an on-premise URL).
+  - name: analyze
+    summary: Send a file or a directory of files for analysis (intezer-cli analyze PATH).
+  - name: analyze-by-list
+    summary: Send a text file containing a list of hashes for analysis (intezer-cli analyze-by-list PATH).
+  - name: index
+    summary: Index files/directories into your organization's private genome for future code-reuse detection.

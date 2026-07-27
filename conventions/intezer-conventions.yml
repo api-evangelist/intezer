@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/intezer/analyze-python-sdk ; https://docs.intezer.com/docs
+base_url: https://analyze.intezer.com/api/v2-0
+authentication:
+  style: bearer-jwt
+  detail: "POST /api/v2-0/get-access-token with {api_key} returns a JWT sent as Authorization: Bearer on subsequent calls."
+  ref: authentication/intezer-authentication.yml
+async_pattern:
+  style: submit-then-poll
+  detail: >-
+    File/URL/endpoint analyses are asynchronous. A submit call returns a result_url /
+    analysis_id; clients poll the analysis status (created > queued > in_progress >
+    finished/failed) until a terminal AnalysisStatusCode before retrieving results.
+  status_codes: [created, queued, in_progress, finished, failed]
+idempotency:
+  supported: false
+  notes: No documented idempotency-key header; de-duplication is implicit via file hash (previously-analyzed hashes short-circuit to existing results).
+versioning:
+  style: uri-path
+  ref: lifecycle/intezer-lifecycle.yml
+error_handling:
+  ref: null
+  notes: Errors surface as non-2xx HTTP status; a public application/problem+json contract was not found (reference is access-gated).
+proxies:
+  supported: true
+  env: [HTTP_PROXY, HTTPS_PROXY]
+notes: >-
+  Derived from the official Python SDK behavior plus the public docs landing; the full
+  API reference is access-gated so pagination and the error envelope could not be
+  captured verbatim. No idempotency contract is documented, so no Idempotency pointer
+  is emitted.

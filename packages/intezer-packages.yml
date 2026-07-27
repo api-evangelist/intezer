@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+source: https://pypi.org/project/intezer-sdk/ ; https://pypi.org/project/intezer-analyze-cli/ ; https://github.com/intezer
+packages:
+  - language: python
+    registry: pypi
+    name: intezer-sdk
+    version: 1.27.6
+    url: https://pypi.org/project/intezer-sdk/
+    install: pip install intezer-sdk
+    source: https://github.com/intezer/analyze-python-sdk
+    docs: https://intezer-python-sdk.readthedocs.io/
+    description: Official Python SDK for the Intezer Platform API 2.0 (file/URL/endpoint/alert analysis, code reuse, IOC lookups).
+    official: true
+  - language: python
+    registry: pypi
+    name: intezer-analyze-cli
+    version: 1.16.0
+    url: https://pypi.org/project/intezer-analyze-cli/
+    install: pip install intezer-analyze-cli
+    source: https://github.com/intezer/analyze-cli
+    description: Official cross-platform command-line tool for analyzing files with the Intezer AI-SOC Platform.
+    official: true
+  - language: javascript
+    registry: npm
+    name: intezer-js
+    url: https://www.npmjs.com/package/intezer-js
+    install: npm install intezer-js
+    source: https://github.com/Caesarovich/intezer-js
+    description: Third-party Node.js integration of the Intezer Analyze API (community-maintained, not first-party).
+    official: false

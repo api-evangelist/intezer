@@ -1,0 +1,18 @@
+generated: '2026-07-19'
+method: searched
+source: https://intezer.com/security/
+url: https://intezer.com/security/
+certifications:
+  - SOC 2 Type II
+security_practices:
+  - Cloud hosting on AWS and Azure
+  - Encryption in transit (TLS 1.2) and at rest (AES-256)
+  - Penetration testing and vulnerability scanning
+  - SOC monitoring and incident response
+evidence:
+  - source: https://intezer.com/security/
+    quote: "Intezer has successfully completed a SOC 2 Type II examination for our AI SOC platform."
+notes: >-
+  Security posture is published on intezer.com/security. No standalone trust portal
+  (e.g. trust.intezer.com), public vulnerability-disclosure program, or security.txt
+  was found. ISO 27001 / HIPAA / PCI are not claimed on the security page.

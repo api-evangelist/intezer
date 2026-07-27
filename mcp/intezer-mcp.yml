@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://securitybrief.news/story/intezer-launches-mcp-server-for-security-ai-agents
+server:
+  name: intezer
+  vendor: Intezer
+  transport: http
+  availability: customers-only
+  url: null
+  description: >-
+    Official Intezer MCP server for security operations. Sits as a layer between an
+    organization's detection systems (EDR, NDR, SIEM, identity, cloud, email security)
+    and AI agents, giving agents access to Intezer case histories, workflows, triage
+    logic, verdicts, evidence and prior investigation records without wiring each tool
+    directly. Available now to Intezer customers.
+clients_supported:
+  - Claude
+  - Cursor
+  - Codex
+capabilities:
+  - Access to case histories and prior investigation records
+  - Retrieve triage logic and workflows
+  - Retrieve investigation verdicts and forensic evidence
+  - Query alert/investigation data assembled by the Intezer platform
+tools: []
+notes: >-
+  Endpoint URL and install/config details are not published publicly (gated to
+  customers); tool list not yet enumerated on a public surface. No OpenAPI is
+  captured in this repo to derive a candidate tool list from.
