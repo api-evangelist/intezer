@@ -1,0 +1,29 @@
+# Front Door AI Index — intezer — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: intezer
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: intezer.com
+  final_host: intezer.com
+  ownership: own
+  owner: intezer
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 12
+  host_score: 12
+  density: 10.54
+  words: 1138
+  tiers:
+    agentic: 2
+    core: 10
+    model: 0
+  ambiguous: 4
+  top_terms:
+    AI: 10
+    intelligence: 3
+    agentic: 1
+    automation: 1
+    fine-tune: 1
