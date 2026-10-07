@@ -1,0 +1,33 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://intezer.com/product/pricing
+sources:
+- https://intezer.com/product/pricing
+- https://intezer.com/pricing/
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: negotiated
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: false
+note: Pricing page lists two packages with no numeric prices; 'Priced by endpoints' and 'Contact us' only.
+plan_count: 2
+plans:
+- name: Starter
+  price_text: Priced by endpoints
+  period: none
+  unit: endpoints
+  included_quota: 24/7 monitoring and automated triage for one alert source (either endpoint or user-reported
+    phishing)
+- name: Complete
+  price_text: Priced by endpoints
+  period: none
+  unit: endpoints
+  included_quota: Everything in Starter for all your alert sources (including SIEM, cloud, identity, and
+    network)
